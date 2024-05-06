@@ -11,16 +11,15 @@
           <h2 class="text-center">{{ column.title }}</h2>
 
           <!-- træk og slip komponent -->
-          <draggable class="list-group kanban-column" :list="column.tasks" group="tasks" itemKey="uniqueId" v-slot="{ element, index}">
-            <template>
+          <draggable class="list-group kanban-column" :list="column.tasks" group="tasks" itemKey="uniqueId">
+            <template #item="{ element, index }">
               <v-card >
                 <v-card-text>
                   <template v-if="!element.editingTitle">
                     <h4 @click="editTask('title', index, column)">{{ element.title }}</h4>
                     <v-icon class="icon" @click="editTask('title', index, column)">mdi-pencil</v-icon>
                   </template>
-                  <template v-else>
-                    
+                  <template v-else>      
                     <v-text-field v-model="element.title" @blur="saveTask('title', index, column)"></v-text-field>
                   </template>
                 </v-card-text>
