@@ -5,9 +5,9 @@
 /* mellemrum mellem kortene */
 .task-card {
   margin-bottom: 10px;
- background-color: #ffecbe;
+  background-color: #ffecbe;
   border: 5px solid #887070;
-  color: #381010;
+  color: #887070;
   margin-bottom: 5px;
   padding: 10px;
 }

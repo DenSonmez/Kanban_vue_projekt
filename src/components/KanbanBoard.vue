@@ -2,7 +2,7 @@
   <v-container class="cus-background">
     <!-- gridkomponent -->
     <v-col cols="12"> <!-- 12 kolonner i gridet -->
-      <h1 class="text-center">Kanban Board</h1>
+      <h2 class="text-left">Kanban Board</h2>
     </v-col>
 
     <v-row class="mt-5"> <!-- for skabe lidt aftand -->
@@ -17,7 +17,7 @@
                 <v-card-text class="edit">
                   <template v-if="!element.editingTitle">
                     <h4 @click="editTask('title', index, column)">{{ element.title }}</h4>
-                    <v-icon class="icon" @click="editTask('title', index, column)" style="color: #381010">mdi-pencil</v-icon>
+                    <v-icon class="icon" @click="editTask('title', index, column)" style="color: #887070">mdi-pencil</v-icon>
                   </template>
                   <template v-else>      
                     <v-text-field v-model="element.title" @blur="saveTask('title', index, column)"></v-text-field>
@@ -27,7 +27,7 @@
                 <v-card-text class="edit">
                   <template v-if="!element.editingDescription">
                     <p @click="editTask('description', index, column)">{{ element.description }}</p>
-                    <v-icon class="icon" @click="editTask('description', index, column)" style="color: #381010" >mdi-pencil</v-icon>
+                    <v-icon class="icon" @click="editTask('description', index, column)" style="color: #887070" >mdi-pencil</v-icon>
                   </template>
                   <template v-else>
                     <v-text-field v-model="element.description" @blur="saveTask('description', index, column)"></v-text-field>
@@ -35,7 +35,7 @@
                 </v-card-text>
                 
                 <v-btn @click="removeTask(column.tasks, element)" small class="float-right">
-                  <v-icon size="25">mdi-delete</v-icon>
+                  <v-icon size="20" >mdi-delete</v-icon>
                   </v-btn>
               </v-card>
             </template>
