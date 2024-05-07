@@ -13,21 +13,21 @@
           <!-- træk og slip komponent -->
           <draggable class="list-group kanban-column" :list="column.tasks" group="tasks" itemKey="uniqueId">
             <template #item="{ element, index }">
-              <v-card >
-                <v-card-text>
+              <v-card class="task-card">
+                <v-card-text class="edit">
                   <template v-if="!element.editingTitle">
                     <h4 @click="editTask('title', index, column)">{{ element.title }}</h4>
-                    <v-icon class="icon" @click="editTask('title', index, column)">mdi-pencil</v-icon>
+                    <v-icon class="icon" @click="editTask('title', index, column)" style="color: #381010">mdi-pencil</v-icon>
                   </template>
                   <template v-else>      
                     <v-text-field v-model="element.title" @blur="saveTask('title', index, column)"></v-text-field>
                   </template>
                 </v-card-text>
 
-                <v-card-text>
+                <v-card-text class="edit">
                   <template v-if="!element.editingDescription">
                     <p @click="editTask('description', index, column)">{{ element.description }}</p>
-                    <v-icon class="icon" @click="editTask('description', index, column)">mdi-pencil</v-icon>
+                    <v-icon class="icon" @click="editTask('description', index, column)" style="color: #381010" >mdi-pencil</v-icon>
                   </template>
                   <template v-else>
                     <v-text-field v-model="element.description" @blur="saveTask('description', index, column)"></v-text-field>

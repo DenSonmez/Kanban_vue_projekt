@@ -1,6 +1,68 @@
-
 /* baggrundsfarve */
 .v-main {
-  background-color: #ffecbe; 
+  background-color: #ffecbe;
+}
+/* mellemrum mellem kortene */
+.task-card {
+  margin-bottom: 10px;
+ background-color: #ffecbe;
+  border: 5px solid #887070;
+  color: #381010;
+  margin-bottom: 5px;
+  padding: 10px;
 }
 
+
+/* baggrundsfarve og optimeringer container */
+.cus-background {
+  background-color: #f2b8b4;
+  padding: 25px;
+  font-size: 25px;
+  height: 100%;
+}
+
+/* størrelsen på inputteksten kantlinje mellem titel og beskrivelse */
+.v-card .v-card-text {
+  border-bottom: 5px solid #381010;
+  padding-top: 1px;
+  font-size: 20px;
+  font-family: "Work Sans", sans-serif;
+  padding: 10px;
+}
+
+/*  pladsholdere i v-text-field */
+.v-text-field input::placeholder {
+  font-family: "Work Sans", sans-serif;
+  font-size: 25px;
+  color: #381010;
+  font-weight: bold;
+}
+
+/* inputtekst i v-text-field */
+.v-text-field input {
+  color: #381010;
+  font-family: "Work Sans", sans-serif;
+  font-size: 25px;
+}
+
+/* edit knap */
+.edit {
+  color: #381010;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+
+/* 
+faver koderne fra hjemmesiden:  */
+/* 
+#f2b8b4
+#fff9f3
+#381010
+#ffecbe
+#f5f5f5
+#887070 
+*/
