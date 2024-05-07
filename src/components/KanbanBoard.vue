@@ -2,12 +2,13 @@
   <v-container class="cus-background">
     <!-- grid component -->
     <v-col cols="12"> <!-- 12 columns in the grid -->
-      <h2 class="text-left">Kanban Board</h2>
+      <h2 class="text-left">FysioFlow</h2>
     </v-col>
 
+  <!-- creates a column for each kanban column -->
     <v-row class="mt-5"> <!-- to create some distance  -->
       <v-col v-for="(column, index) in arrColumns" :key="index" cols="2,5">
-        <!-- creates a column for each kanban column -->
+      
         <v-card class="p-2" :color="column.color">
           <h2 class="text-center">{{ column.title }}</h2>
 
