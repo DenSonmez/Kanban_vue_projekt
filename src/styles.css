@@ -52,6 +52,17 @@
   justify-content: space-between;
   align-items: center;
 }
+.editAssignment {
+  color: #381010;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.v-menu {
+    left: 50%; 
+    transform: translateX(-50%); 
+  }
 
 
 
@@ -66,3 +77,5 @@ faver koderne fra hjemmesiden:  */
 #f5f5f5
 #887070 
 */
+
+
