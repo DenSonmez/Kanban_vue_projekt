@@ -88,6 +88,8 @@
 
 <script>
 import draggable from "vuedraggable";
+import { addTask, selectName, addNameToTask, removeTask, editTask, saveTask } from "./Methods";
+
 export default {
   name: "kanban-board",
   components: {
@@ -115,52 +117,13 @@ export default {
 
   //metoder til at tilføje, fjerne og redigere opgaver
   methods: {
-    addTask(column) {
-      const { newTask } = column;
-      if (newTask.title.trim()) {
-        const task = {
-          title: newTask.title.trim(),
-          description: newTask.description.trim() || "No description",
-          assignedTo: newTask.assignedTo.trim() || "Unassigned",
-          editTitle: false,
-          editDescription: false,
-          editAssignedTo: false,
-          showNameListe: false
-        };
-        column.tasks.push(task);
-        column.newTask = { title: "", description: "", assignedTo: "" };
-        column.showInputField = false;
-      }
-    },
-
-    //Funktion til at vise navne listen
-    selectName(index, column) {
-      column.tasks[index].showNameListe = !column.tasks[index].showNameListe;
-    },
-    //Funktion til at tilføje navn til opgaven
-    addNameToTask(name, index, column) {
-      column.tasks[index].assignedTo = name;
-      column.tasks[index].showNameListe = false;
-    },
-    //Funktion til at fjerne opgave
-    removeTask(tasks, task) {
-      const index = tasks.indexOf(task);
-      if (index !== -1) {
-        tasks.splice(index, 1);
-      }
-    },
-
-    //Funktion til at redigere opgave
-    editTask(field, index, column) {
-      column.tasks[index][`edit${field.charAt(0).toUpperCase() + field.slice(1)}`] = true;
-    },
-    saveTask(field, index, column) {
-      column.tasks[index][`edit${field.charAt(0).toUpperCase() + field.slice(1)}`] = false;
-    }
+    addTask,
+    selectName,
+    addNameToTask,
+    removeTask,
+    editTask,
+    saveTask
   }
-
-
 }
-
 
 </script>
