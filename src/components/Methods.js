@@ -1,5 +1,4 @@
-// TaskMethods.js
-
+// Methods to add, remove and edit tasks
 export function addTask(column) {
     const { newTask } = column;
     if (newTask.title.trim()) {
@@ -17,11 +16,11 @@ export function addTask(column) {
       column.showInputField = false;
     }
   }
-  
+  // metod to show the input field
   export function selectName(index, column) {
     column.tasks[index].showNameListe = !column.tasks[index].showNameListe;
   }
-  
+  // metod to add the name to the task
   export function addNameToTask(name, index, column) {
     column.tasks[index].assignedTo = name;
     column.tasks[index].showNameListe = false;
